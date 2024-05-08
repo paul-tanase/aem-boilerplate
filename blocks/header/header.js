@@ -139,8 +139,11 @@ export default async function decorate(block) {
   nav.prepend(hamburger);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
-  toggleMenu(nav, navSections, isDesktop.matches);
-  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+
+  if (navSections) { // PT change: add condition to support custom /nav that does not need JS
+    toggleMenu(nav, navSections, isDesktop.matches);
+    isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+  }
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
