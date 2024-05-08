@@ -1,0 +1,9 @@
+.custom-01 {
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.custom-01:hover {
+    background-color:antiquewhite;
+}
