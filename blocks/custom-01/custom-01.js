@@ -1,8 +1,8 @@
 export default function decorate(block) {
-    const callback = () => {
-        console.log('mouseover');
-    };
+ const callback = () => {
+  alert('mouseover');
+};
 
-    block.removeEventListener('mouseover', callback)
-    block.addEventListener('mouseover', callback);
+  block.removeEventListener('mouseover', callback);
+  block.addEventListener('mouseover', callback);
 }
